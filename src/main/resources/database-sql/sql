@@ -1,0 +1,23 @@
+/*
+SQLyog Ultimate v13.1.1 (64 bit)
+MySQL - 5.7.16
+*********************************************************************
+*/
+/*!40101 SET NAMES utf8 */;
+
+create table `demo` (
+	`id` int (11),
+	`name` varchar (200),
+	`phone` varchar (80),
+	`mail` varchar (200),
+	`age` varchar (200),
+	`sex` int (11),
+	`city` varchar (200),
+	`init_key` varchar (800),
+	`password` varchar (800),
+	`vice_key` varchar (800),
+	`init_login` int (11)
+);
+insert into `demo` (`id`, `name`, `phone`, `mail`, `age`, `sex`, `city`, `init_key`, `password`, `vice_key`, `init_login`) values('1','张三','13766662222','137@qq.com','16','1','深圳',NULL,'123456',NULL,'0');
+insert into `demo` (`id`, `name`, `phone`, `mail`, `age`, `sex`, `city`, `init_key`, `password`, `vice_key`, `init_login`) values('2','李四','13122224444','191@qq.com','18','1','深圳',NULL,'123456',NULL,'0');
+insert into `demo` (`id`, `name`, `phone`, `mail`, `age`, `sex`, `city`, `init_key`, `password`, `vice_key`, `init_login`) values('3','王五','13855566622','138@qq.com','25','1','太原','56456456456','123456',NULL,'0');

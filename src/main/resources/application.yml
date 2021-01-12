@@ -1,0 +1,41 @@
+server:
+  #端口号
+  port: 8888
+
+spring:
+  application:
+    name: GoogleAuth
+  datasource:
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://47.113.116.62:3306/demo
+  messages:
+    encoding: UTF-8
+ # mvc:
+ #   throw-exception-if-no-handler-found: true
+#  redis:
+#    timeout: 5000
+#    host: 192.168.17.203
+#    port: 30018
+#    lettuce:
+#      pool:
+#        max-active: 8
+#        max-wait: -1
+#        max-idle: 8
+#        min-idle: 1
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: auto
+      field-strategy: not_empty
+        #驼峰下划线转换
+      column-underline: true
+        #逻辑删除配置
+      logic-delete-value: 0
+      logic-not-delete-value: 1
+      db-type: mysql
+    refresh: false
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false

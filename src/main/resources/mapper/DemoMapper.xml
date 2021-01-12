@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.googleauth.dao.DemoDao">
+
+    <select id="list" parameterType="java.util.Map" resultType="java.util.Map">
+        SELECT
+          a.id AS id,
+          a.name AS name,
+          a.phone AS phone,
+          a.mail AS mail,
+          a.age AS age,
+          a.sex AS sex,
+          a.city AS city,
+          a.init_key AS initKey,
+          a.password AS password,
+          a.vice_key AS viceKey,
+          a.init_login AS initLogin
+        FROM
+          demo a
+        WHERE a.name = #{userName}
+          AND a.password = #{password}
+    </select>
+
+    <insert id="add" parameterType="java.util.Map">
+       INSERT INTO demo(name,phone,mail,age,sex,city,init_key,password) VALUES
+      (
+      #{name},#{phone},#{mail},
+      #{age},#{sex},#{city},
+      #{initKey},#{password}
+      )
+    </insert>
+
+    <update id="updateInitKey" parameterType="java.util.Map">
+       UPDATE demo SET init_key = #{initKey} WHERE name=#{name}
+    </update>
+
+    <update id="updateViceKey" parameterType="java.util.Map">
+       UPDATE demo SET vice_key = #{viceKey} WHERE name=#{name}
+    </update>
+
+    <update id="updateInitLogin" parameterType="java.util.Map">
+      UPDATE demo SET init_login = #{mark} WHERE name=#{name}
+    </update>
+
+</mapper>
+
