@@ -6,10 +6,10 @@ spring:
   application:
     name: GoogleAuth
   datasource:
-    username: root
-    password: 123456
+    username: demo
+    password: demo
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://47.113.116.62:3306/demo
+    url: jdbc:mysql://1.1.1.1:3306/demo
   messages:
     encoding: UTF-8
  # mvc:
